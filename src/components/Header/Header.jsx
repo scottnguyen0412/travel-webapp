@@ -35,7 +35,7 @@ const Header = () => {
                 </li>
 
                 <li className='navItem'>
-                  <a className='navLink'>Packages</a>
+                  <a className='navLink'>Services</a>
                 </li>
 
                 <li className='navItem'>
