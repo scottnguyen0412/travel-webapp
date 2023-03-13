@@ -1,10 +1,77 @@
-import React from 'react'
+import {React, useState} from 'react'
 import './header.css'
+import {FlightOutlined, Cancel, Apps} from '@mui/icons-material';
+
+
 const Header = () => {
+
+  const [active, setActive] = useState('navBar');
+
+  //handle show navigation toggle navbar
+  const showNavigation = () => {
+    // Cập nhật lại giá trị active add class navBar + activeNavbar
+    setActive('navBar activeNavbar')
+  }
+
+  // remove navbar
+  const closeNavbar = () => {
+    // update class navBar
+    setActive('navBar')
+  }
+
   return (
-    <div>
-      Header
-    </div>
+    <section className='navbarSection'>
+          <header className='header flex'>
+            <div className="logoDiv">
+              <a href='' className='logo flex'>
+                <h1><FlightOutlined className='icon'/> Travel app</h1>
+              </a>
+            </div>
+
+            <div className={active}>
+              <ul className='navLists flex'>
+                <li className='navItem'>
+                  <a className='navLink'>Home</a>
+                </li>
+
+                <li className='navItem'>
+                  <a className='navLink'>Packages</a>
+                </li>
+
+                <li className='navItem'>
+                  <a className='navLink'>Shop</a>
+                </li>
+
+                <li className='navItem'>
+                  <a className='navLink'>About</a>
+                </li>
+
+                <li className='navItem'>
+                  <a className='navLink'>Pages</a>
+                </li>
+
+                <li className='navItem'>
+                  <a className='navLink'>News</a>
+                </li>
+
+                <li className='navItem'>
+                  <a className='navLink'>Contacts</a>
+                </li>
+                <button className='btn'>
+                  <a href=''>
+                  Book Now
+                  </a>
+                </button>
+              </ul>
+              <div onClick={closeNavbar} className="closeNavbar">
+                <Cancel className='icon'/>
+              </div>
+            </div>
+            <div onClick={showNavigation} className="toggleNavbar">
+                <Apps className='icon'/>
+            </div>
+          </header>
+    </section>
   )
 }
 
