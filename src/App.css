@@ -29,6 +29,10 @@
 
 /* default styling apply for all web app */
 
+html{
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
 }

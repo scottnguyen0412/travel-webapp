@@ -1,11 +1,20 @@
-import React from 'react'
+import {React, useEffect} from 'react'
 import './home.css'
 import Video from '../../assets/flycam-danang.mp4'
 import {LocationOnOutlined, FilterListOutlined, FacebookOutlined,
       Instagram, CardTravel, FormatListBulleted, AppRegistrationOutlined
 } from '@mui/icons-material';
 
+// animation on scroll
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Home = () => {
+
+  useEffect(() => {
+      // add aos
+      AOS.init({duration:3000})
+  },[])
   return (
     <section className='home'>
       <div className="overlay">
@@ -14,16 +23,16 @@ const Home = () => {
         </video>
         <div className="homeContent container">
           <div className="textDiv">
-            <span className="smallText">
+            <span data-aos="fade-up" className="smallText">
               Our Services
             </span>
-            <h1 className="homeTitle">
+            <h1 data-aos="fade-up" className="homeTitle">
               Search your Holidays
             </h1>
           </div>
           
 
-          <div className="cardDiv grid">
+          <div data-aos="fade-up" className="cardDiv grid">
             <div className="destinationInput">
               <label htmlFor="city" >Search your destination:</label>
               <div className="input flex">
@@ -55,7 +64,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="homeFooterIcons flex">
+          <div data-aos="fade-up" className="homeFooterIcons flex">
             <div className="rightIcons">
                   <FacebookOutlined className='icon'/>
                   <Instagram className='icon'/>

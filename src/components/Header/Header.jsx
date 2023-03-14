@@ -1,9 +1,15 @@
-import {React, useState} from 'react'
+import {React, useEffect, useState} from 'react'
 import './header.css'
 import {FlightOutlined, Cancel, Apps} from '@mui/icons-material';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Header = () => {
+
+  useEffect(() => {
+    AOS.init({duration:3000})
+},[])
 
   const [active, setActive] = useState('navBar');
 

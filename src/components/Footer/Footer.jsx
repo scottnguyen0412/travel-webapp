@@ -1,13 +1,19 @@
-import React from 'react'
+import {React, useEffect} from 'react'
 import './footer.css'
 import SeaVideo from '../../assets/sea.mp4'
 import { NearMeOutlined, FlightOutlined, Twitter, YouTube,
     Facebook, Instagram, CardTravel, KeyboardArrowRight
 } from '@mui/icons-material'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const Footer = () => {
+  
+  useEffect(() => {
+    AOS.init({duration:3000})
+},[])
   return (
     <section className='footer'>
         <div className="videoDiv">
@@ -16,12 +22,12 @@ const Footer = () => {
 
         <div className="secContent container">
           <div className="contactDiv flex">
-            <div className="text">
+            <div data-aos="fade-right" className="text">
               <small>KEEP IN TOUCH</small>
               <h2>Travel with us</h2>
             </div>
 
-            <div className="inputDiv flex">
+            <div data-aos="fade-right" className="inputDiv flex">
               <input type="text" placeholder='Enter Email Address'/>
               <button className='btn flex' type='submit'>
                 Send <NearMeOutlined className='icon'/>
@@ -35,10 +41,10 @@ const Footer = () => {
                   <FlightOutlined className='icon'/>Travel</a>
               </div>
 
-              <div className="footerParagraph">
+              <div data-aos="fade-right" className="footerParagraph">
               Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
               </div>
-              <div className="footerSocials">
+              <div data-aos="fade-up-right" className="footerSocials">
                 <Twitter className='icon'/>
                 <YouTube className='icon'/>
                 <Facebook className='icon'/>
@@ -47,7 +53,7 @@ const Footer = () => {
               </div>
             </div>
 
-          <div className="footerLink grid">
+          <div data-aos="zoom-in-up" data-aos-duration="5000" className="footerLink grid">
               
             {/* Group title 1 */}
               <div className="linkGroup">

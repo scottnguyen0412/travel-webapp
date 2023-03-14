@@ -1,21 +1,26 @@
-import React from 'react'
+import {React, useEffect} from 'react'
 import './mainContent.css'
 import { Data } from '../../fakeData/FakeInfoDest'
 import {Room, ContentPaste} from '@mui/icons-material';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const MainContent = () => {
+  useEffect(() => {
+    AOS.init({duration:3000})
+},[])
+
   return (
     <section className='main container section'>
         <div className="secTitle">
-          <h3 className="title">
+          <h3 data-aos="fade-right" className="title">
             Most visited destinations
           </h3>
         </div>
 
         <div className="secContent grid">
             {Data.map((item, idx) => (
-              <div key={idx} className='singleDestination'>
+              <div key={idx} data-aos="fade-up-right" className='singleDestination'>
                 <div className="imageDiv">
                   <img src={item.imageSrc} alt={item.destTitle} />
                 </div>

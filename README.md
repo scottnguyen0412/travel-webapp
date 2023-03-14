@@ -68,4 +68,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# travel-webapp
+
+### Version
+- React v18.2.0
+- mui/icon-marterial v5.11.11
+- mui/material v5.11.12
+- aos(animation on scroll) v2.3.4
+
+
