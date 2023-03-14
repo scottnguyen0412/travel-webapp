@@ -1,5 +1,5 @@
 import {React, useEffect, useState} from 'react'
-import './header.css'
+import './header.css';
 import {FlightOutlined, Cancel, Apps} from '@mui/icons-material';
 
 import AOS from 'aos';

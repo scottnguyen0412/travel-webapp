@@ -5,6 +5,7 @@
     --whiteColor: hsl(0, 0%, 100%);
     --blackColor: hsl(201, 33%, 16%);
     --textColor: hsl(240, 4%, 36%);
+    --textColorHeader: rgb(223, 54, 167);
     --whiteColorDeam: hsl(0, 0%, 93%);
     --greyText: rgb(190, 190, 190);
     --inputColor: rgb(239, 239, 239);
@@ -77,7 +78,7 @@
                 padding: .5rem 0;
 
                 .navLink {
-                    color: var(--textColor);
+                    color: var(--textColorHeader);
                     font-size: .9rem;
                     font-weight: 600;
                     &:hover {
@@ -111,9 +112,53 @@
         }
     }
 }
-// Responsive
+
+// medium and large screen device
 @media screen and (min-width: 768px) {
     .toggleNavbar, .closeNavbar {
         display: none;
+    }
+
+    .header{
+        padding: 1.5rem 2rem;
+
+        .navBar{
+            .navLists{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+
+                .navItem{
+
+                    .navLink{
+                        color: var(--textColorHeader);
+                        padding: 0 0.45rem;
+                        font-size: .9rem;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 968px) {
+    .header{
+        .navBar{
+            .navLists{
+                .navItem{
+                    padding: 0 0.7rem;
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .header{
+        padding: 1rem 8.5rem;
+        
     }
 }

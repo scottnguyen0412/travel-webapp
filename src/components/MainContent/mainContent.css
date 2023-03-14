@@ -30,9 +30,9 @@
   content: "";
   background: var(--secondaryColor);
   height: 5px;
-  width: 120px;
+  width: 100px;
   right: 0;
-  bottom: 5px;
+  bottom: -4px;
   z-index: -1;
 }
 .main .secContent {
@@ -132,4 +132,27 @@
 .main .secContent .singleDestination .cardInfo .btn .icon {
   align-self: center;
   font-size: 15px;
+}
+
+@media screen and (min-width: 500px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .title::after {
+    width: 155px !important;
+  }
+  .secContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .secContent .singleDestination {
+    height: auto;
+  }
+}
+@media screen and (min-width: 840px) {
+  .secContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .secContent .singleDestination {
+    height: auto;
+  }
 }/*# sourceMappingURL=mainContent.css.map */
